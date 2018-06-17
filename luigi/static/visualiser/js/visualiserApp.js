@@ -34,6 +34,7 @@ function visualiserApp(luigi) {
         $("script[type='text/template']").each(function(i, element) {
             var name = $(element).attr("name");
             var content = $(element).text();
+            Mustache.parse(content);
             templates[name] = content;
         });
     }
